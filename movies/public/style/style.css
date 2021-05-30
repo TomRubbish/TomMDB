@@ -1,0 +1,71 @@
+/* shared */
+
+body {
+  width: 60%;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.header-wrapper {
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+
+.title-wrapper, .poster-wrapper {
+  text-align: center;
+}
+/* home page */
+
+.input-wrapper {
+  height: auto;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+form {
+  height: 50px;
+}
+
+/* about */
+
+.about-wrapper {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+
+
+/* movie details */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: lightgrey;
+  margin-top: 20px;
+}
+
+.ratings-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.critic {
+  margin: 0;
+  margin-top: 65px;
+  text-align:center;
+}
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  height: 100px;
+}
+
+.not-found {
+  background-color: lightgrey;
+  text-align: center;
+}

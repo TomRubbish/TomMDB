@@ -1,0 +1,42 @@
+
+<% if movie["Response"] == "True" %>
+
+  <div class="content-wrapper">
+
+    <div class="title-wrapper">
+      <h2><%= movie["Title"] %>  </h2> 
+      <h4><%=movie["Released"]%> <%=movie["Rated"]%> <%=movie["Runtime"]%></h4>
+    </div>
+
+    <div class="ratings-wrapper">
+      
+        <% movie["Ratings"].each do |rating| %>
+          <h5 class="critic"><%=rating["Source"]%>: <%=rating["Value"]%></h5>
+        <% end %>
+      
+    </div>
+
+    <div class="poster-wrapper">
+      <img src="<%=movie["Poster"]%>" alt="Movie Poster">
+    </div>
+
+    <div class="details-wrapper">
+      <h5><%= movie["Genre"] %></h5>
+      <p><%= movie["Plot"] %></p>
+      <h5> Directed by:  <%= movie["Director"] %></h5>
+      <h5>Written by: <%= movie["Writer"] %></h5>
+      <h5> Starring <%= movie["Actors"] %></h5>
+    </div>
+
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+  </div>
+<% elsif movie["Response"] == "False"  %>
+
+  <h2 class="not-found"> Movie not found! Hit Home and try again</h2>
+
+<% end %>
+
+
+
